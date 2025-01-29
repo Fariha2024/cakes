@@ -2,8 +2,8 @@
 const About = () => {
     return(
        <div>
-            <section className='about' style={{backgroundImage:"url(bg-cover.jpg)"}}>
-                <div className='content'>
+            <section className='about' style={{backgroundImage:"url(1.png)"}}>
+                <div className='contain'>
                     <h2 className='fadeIn'>About Us</h2>
                     <p>Welcome to Home Baking Cakes!
 

@@ -308,3 +308,19 @@ img {
   width: 100%; /* or any specific value like 300px */
   height: auto; /* Maintain aspect ratio */
 }
+.about {
+  background-size: cover; /* Ensures the background image covers the container without distorting */
+  background-position: center center; /* Centers the image in the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the section takes the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  background-color: rgba(255, 255, 255, 0.7); /* Optional: makes text more readable over the image */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
