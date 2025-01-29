@@ -292,3 +292,19 @@ p{
       padding: 20px;
   }
 }
+
+
+
+
+/* Custom class for styling the images */
+.custom-image {
+  border-radius: 10px;  /* Example styling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow effect */
+  object-fit: cover;  /* Ensures images cover the container's area */
+}
+
+
+img {
+  width: 100%; /* or any specific value like 300px */
+  height: auto; /* Maintain aspect ratio */
+}
