@@ -1,21 +1,294 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: Arial, sans-serif;
+  background-color:rgb(209, 198, 198);
+  /* color: white; */
+
+}
+a{
+  text-decoration: none;
+  color: white;
+
+}
+h1, h2, h3{
+  font-weight: bold;
+
+}
+/* header style */
+.header{
+  background-color: rgba(252, 44, 7, 0.397);
+  padding: 20px;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.header .logo{
+  font-size: 24px;
+  color: white;
+  
+}
+.header nav{
+  display: flex;
+  gap: 40px;
+}
+.header nav a{
+  color:white;
+  font-weight: bold;
+  
+}
+.header nav a:hover{
+  text-decoration: underline;
+}
+/* Footer Styles */
+
+.text{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.footer{
+  margin: 0;
+}
+/* Home Page Style */
+.hero{
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-left: 60px;
+
+}
+.hero h1{
+  font-size: 50px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) ;
+}
+.hero p{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.hero button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #10345e;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero button:hover{
+      background-color: #005bb5;
+}
+/* About page style */
+
+.about{
+  background-size: cover;
+  background-position: center;
+  color: rgb(27, 82, 5);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  
+  
+}
+.content{
+  max-width: 500px;
+  text-align: left;
+ 
+  
+}
+.content p{
+  padding-top: 20px;
+
+  
+}
+.fadeIn{
+ text-align: center;
+}
+p{
+  padding-left: 70px;
+  font-weight: bold;
+  
+}
+/* Cake Styles */
+.cakes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+ margin-top: 40px;
+ margin: 50px;
+
+}
+.cake-card{
+  width: 90%;
+  background-color: rgb(218, 44, 96);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.cake-card img{
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+.cake-card h3{
+  margin-top: 10px;
+
+}
+.cake-card p{
+  color: #0e0c0c;
+  font-size: 14px;
+  padding-left: 10px;
+
+}
+.cake-card .price{
+  font-size: 20px;
+  font-weight: bold;
+  color: #005bb5;
+}
+.cake-card button{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #005bb5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+.cake-card button:hover{
+  background-color: #10345e;
+}
+.cake-card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3 ease;
+
+}
+.cake-card:hover{
+  transform: scale(1.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Contact Style */
+
+.contact-form{
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(2, 221, 13, 0.1);
+  
+}
+.contact-form input,
+.contact-form textarea{
+  
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #005bb5;
+  border-radius: 5px;
+
+}
+.contact-form button{
+  padding: 10px 20px;
+  background-color: rgb(233, 43, 10);
+  color: rgb(247, 250, 250);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.contact-form button:hover{
+  background-color: #10345e;
+}
+
+/* fade in animation  */
+
+@keyframes fadeIn{
+  0%{
+      opacity: 0;
+      transform: translateY(20px);
+  
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0); 
   }
 }
+.fadeIn{
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+} 
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* responsive style */
+
+@media (max-width: 768px){
+  .header{
+      flex-direction: column;
+      text-align: center;
+
+  }
+  .header .logo{
+      margin-bottom: 10px;
+
+  }
+  .header nav{
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+  }
+  .hero{
+      height: 70vh;
+      padding: 20px;
+      text-align: center;
+  }
+  .hero h1{
+      font-size: 36px;
+  }
+  .hero p{
+      font-size: 18px;
+  }
+  .hero button{
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+  }
+  .cakes{
+      grid-template-columns: 1fr;
+      margin: 20px;
+  }
+  .about{
+      padding: 40px 20px;
+      height: auto;
+  }
+  .about content{
+      width: 100%;
+      padding: 20px;
+  }
+  .contact-form{
+      margin: 20px;
+      padding: 20px;
+  }
 }
